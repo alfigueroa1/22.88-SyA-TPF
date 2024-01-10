@@ -1,0 +1,22 @@
+V-01, V-02, V-03:		LBP_Vlv – Simple Valve -> valvulas ON/OFF
+CV-01, CV-03:			LBP_VlvA – Analog Controlled Valve
+V-04:				LBP_3wVlv – Three-Way Valve
+TT-01, TT-02, TT-03, TT-04,
+FT-01, PT-01:			LBP_AnaRead - Analog Value Processign -> todas las entradas analogicas
+LSL-01:				LBP_OpDig - Switching a Digital Signal -> Sensores ON/OFF como detectores de nivel
+PID-01, PID-02, PID-03: 	LBP_CtrlPID - Continuous PID Controller
+B-01, B-02, B-03: 		LBP_MtrF - Speed-Controlled Motor -> bombas (pumps)
+
+15:11 -> Inicio de explicacion de Function block y declaracion de bloques
+	-Primero crear un FB llamado "Equipos_CIP" donde esten todos los bloques que vamos a usar, agregandole TAG y el tipo de variable
+	-Colocar las variables en "Static", con el nombre que figura en el diagrama de proceso
+	-Colocar tamién su versión de "sym" (solo a válvulas y motores), que es el que vincula la HMI con los bloques "reales" dentro del FB
+	-Luego instanciarlos dentro del FB.
+	-identName: es el nombre que identifica al bloque, asignarle el tag del objeto, tiene que ser el mismo que el de la HMI
+
+20:00 -> Inicio de explicación de como funcionan los bloques en la HMI
+	-Asegurarse que el TAG este bien puesto
+	-Fijarse que en "Interface" tenga puesto el tag correcto
+	-En HMI tags, armarse otro archivo en "CIP" que sea Equipos_CIP, QUE ES UNA LISTA DE TAGS DONDE ATAMOS LOS OBJETOS DEL PCL AL PANEL
+	-En "PLC tag" va "Equipos_CIP_DB......." que es el DB donde esta instanciado el item
+	-Siempre tenes dos cosas de interes por cada objeto, "statData" y "statsSymbol"

@@ -1,0 +1,19 @@
+V-01 - Válvula ON-OFF de "Ice water"
+V-02 - Válvula ON-OFF de "Cold Water"
+V-03 - Válvula ON-OFF de "Steam"
+CV-01 - Válvula de control de "Ice water"
+CV-03 - Válvula de control de "Steam"
+V-04 - Válvula desviadora al tanque o salida de producto
+TT-01 - Transmisor de temperatura del pre calentamiento regenerativo
+TT-02 - Transmisor de temperatura de entrada al pre enfriamiento regenerativo
+TT-03 - Transmisor de temperatura del intercambiador de calor
+TT-04 - Transmisor de temperatura del producto de salida
+FT-01 - Caudalímetro de entrada de producto
+PT-01 - Transmisor de presión del pre calentamiento regenerativo
+LSL-01 - Detector de nivel del tanque de producto
+PID-01 - PID entre B-01 y FT-01, Q=20kl/h
+PID-02 - PID entre CV-03 y TT-03, T = 75°C
+PID-03 - PID entre CV-01 y TT-04, T = 4°C
+B-01 - Bomba de entrada de producto
+B-02 - Bomba de "Heating medium"
+B-03 - Bomba booster de pre enfriamiento regenerativo
